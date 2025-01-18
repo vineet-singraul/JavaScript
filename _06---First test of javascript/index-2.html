@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Confirm Box Example</title>
+  <script>
+    function displayNumbers() {
+      const userResponse = confirm("Do you want to see the numbers from 1 to 10?");
+      
+      if (userResponse) {
+        let numbers = "";
+        for (let i = 1; i <= 10; i++) {
+          numbers += i + " ";
+        }
+        alert("Numbers from 1 to 10: " + numbers);
+      } else {
+        alert("You chose not to see the numbers.");
+      }
+    }
+  </script>
+</head>
+<body>
+  <button onclick="displayNumbers()">Click Me</button>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style>
+        p {
+            color: red;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="javascript:void(0);">
+        <div id="nameDiv">
+            <p id="errorname"></p>
+            <input type="text" id="username" placeholder="Enter Your Name :">
+        </div>
+
+        <div id="emailDiv">
+            <p id="erroremail"></p>
+            <input type="text" id="useremail" placeholder="Enter Your Mail :">
+        </div>
+        <br><br><br>
+
+        <button onclick="Submitbtn()">Submit</button>
+    </form>
+
+    <script>
+        const Submitbtn = () => {
+            let username = document.querySelector("#username").value.trim();
+            let useremail = document.querySelector("#useremail").value.trim();
+
+            let errorname = document.querySelector("#errorname");
+            let erroremail = document.querySelector("#erroremail");
+
+            errorname.textContent = "";
+            erroremail.textContent = "";
+
+            let isValid = true;
+
+            if (username === "") {
+                errorname.textContent = "Name is required.";
+                isValid = false;
+            }
+
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (useremail === "") {
+                erroremail.textContent = "Email is required.";
+                isValid = false;
+            } else if (!emailRegex.test(useremail)) {
+                erroremail.textContent = "Invalid email format.";
+                isValid = false;
+            }
+
+            if (isValid) {
+                alert("Form submitted successfully!");
+            }
+        };
+    </script>
+</body>
+
+</html>

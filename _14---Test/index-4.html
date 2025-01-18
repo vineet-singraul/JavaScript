@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="mainDiv">
+        <p id="showing">Cybrom</p>
+        <br><br>
+        <button id="btnnn" onclick="display()">Hide</button>
+    </div>
+
+    <script>
+        let seepTag = document.querySelector("#showing");
+        let btn = document.querySelector("#btnnn");
+
+        const display = () => {
+            if (seepTag.style.opacity !== "0") {
+                seepTag.style.opacity = "0"; 
+                btn.innerHTML = "Show";
+            } else {
+                seepTag.style.opacity = "1"; 
+                btn.innerHTML = "Hide";
+            }
+        };
+    </script>
+</body>
+</html>
