@@ -1,0 +1,76 @@
+{
+  "Doctor": [
+    {
+      "name": "Vineet",
+      "age": 20,
+      "number": 4534534534,
+      "problem": "cold",
+      "location": "Bhopal",
+      "price": 500,
+      "id": "2ad6"
+    },
+    {
+      "name": "Anjali",
+      "age": 32,
+      "number": 9845123478,
+      "problem": "fever",
+      "location": "Mumbai",
+      "price": 700,
+      "id": "99bd"
+    },
+    {
+      "name": "Rahul",
+      "age": 28,
+      "number": 7564321879,
+      "problem": "headache",
+      "location": "Delhi",
+      "price": 600,
+      "id": "a316"
+    },
+    {
+      "name": "Sneha",
+      "age": 30,
+      "number": 8673451230,
+      "problem": "stomach pain",
+      "location": "Pune",
+      "price": 550,
+      "id": "86d4"
+    },
+    {
+      "name": "Amit",
+      "age": 40,
+      "number": 9098123465,
+      "problem": "diabetes",
+      "location": "Chennai",
+      "price": 1000,
+      "id": "c473"
+    },
+    {
+      "name": "Pooja",
+      "age": 35,
+      "number": 9876543210,
+      "problem": "cold and fever",
+      "location": "Kolkata",
+      "price": 750,
+      "id": "fdf8"
+    },
+    {
+      "name": "Ravi",
+      "age": 29,
+      "number": 8765432190,
+      "problem": "back pain",
+      "location": "Hyderabad",
+      "price": 850,
+      "id": "c646"
+    },
+    {
+      "name": "Shweta",
+      "age": 26,
+      "number": 9123456780,
+      "problem": "allergy",
+      "location": "Jaipur",
+      "price": 650,
+      "id": "9236"
+    }
+  ]
+}
