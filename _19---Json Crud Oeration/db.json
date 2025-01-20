@@ -1,0 +1,76 @@
+{
+  "Doctor": [
+    {
+      "name": "Karan",
+      "age": 28,
+      "number": 5432167890,
+      "problem": "Cold",
+      "location": "Hyderabad",
+      "Price": 400,
+      "id": "9a02"
+    },
+    {
+      "name": "Alok",
+      "age": 35,
+      "number": 8987654321,
+      "problem": "Fever",
+      "location": "Ahmedabad",
+      "Price": 600,
+      "id": "4855"
+    },
+    {
+      "name": "Neha",
+      "age": 22,
+      "number": 7890123456,
+      "problem": "Cough",
+      "location": "Jaipur",
+      "Price": 450,
+      "id": "6b07"
+    },
+    {
+      "name": "Siddharth",
+      "age": 31,
+      "number": 6789012345,
+      "problem": "Allergy",
+      "location": "Lucknow",
+      "Price": 500,
+      "id": "902e"
+    },
+    {
+      "name": "Divya",
+      "age": 26,
+      "number": 5678901234,
+      "problem": "Headache",
+      "location": "Surat",
+      "Price": 400,
+      "id": "032a"
+    },
+    {
+      "name": "Ravi",
+      "age": 33,
+      "number": 4567890123,
+      "problem": "Back Pain",
+      "location": "Patna",
+      "Price": 550,
+      "id": "d8d2"
+    },
+    {
+      "name": "Pooja",
+      "age": 24,
+      "number": 3456789012,
+      "problem": "Flu",
+      "location": "Indore",
+      "Price": 450,
+      "id": "07ce"
+    },
+    {
+      "name": "Tanya",
+      "age": 23,
+      "number": 1234567891,
+      "problem": "Fever",
+      "location": "Kanpur",
+      "Price": 500,
+      "id": "a9ad"
+    }
+  ]
+}

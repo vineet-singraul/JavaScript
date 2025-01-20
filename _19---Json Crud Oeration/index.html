@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Details Form</title>
+    <style>
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #ff7eb3, #ff758c, #ff8474);
+    background-size: 400% 400%;
+    animation: gradientBackground 8s ease infinite;
+    color: #ffffff;
+}
+
+@keyframes gradientBackground {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.form-container {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #ffffff;
+    font-size: 0.9rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.3),
+    inset -4px -4px 8px rgba(255, 255, 255, 0.8);
+    font-size: 1rem;
+    color: #333;
+    outline: none;
+    transition: box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+    box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.3),
+    inset -4px -4px 8px rgba(255, 255, 255, 0.8);
+}
+
+#button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #ff758c, #ff8474);
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+    cursor: pointer;
+    box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.3),
+    inset -4px -4px 8px rgba(247, 63, 63, 0.8);
+    transition: all 0.3s ease;
+}
+
+#button:hover {
+    background: linear-gradient(135deg, #ff8474, #ff758c);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+#button:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: black;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.927);
+
+}
+
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Doctor Details</h2>
+        <form id="doctorForm">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter Name" required>
+            </div>
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input type="number" id="age" name="age" placeholder="Enter Age" required>
+            </div>
+            <div class="form-group">
+                <label for="number">Number</label>
+                <input type="number" id="number" name="number" placeholder="Enter Contact Number" required>
+            </div>
+            <div class="form-group">
+                <label for="problem">Problem</label>
+                <input type="text" id="problem" name="problem" placeholder="Enter Problem" required>
+            </div>
+            <div class="form-group">
+                <label for="location">Location</label>
+                <input type="text" id="location" name="location" placeholder="Enter Location" required>
+            </div>
+            <div class="form-group">
+                <label for="price">Price</label>
+                <input type="number" id="price" name="price" placeholder="Enter Price" required>
+            </div>
+
+            <input type="submit" value="Book Apointment" id="button" onclick="return SetAllDataInCard()">
+        </form>
+    </div>
+</body>
+</html>

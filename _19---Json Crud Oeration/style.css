@@ -1,0 +1,147 @@
+/* Reset and Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #4e54c8, #8f94fb);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #fff;
+    overflow: scroll;
+}
+
+/* Main Display Container */
+#display {
+    width: 100vw;
+    background: linear-gradient(135deg, #4e54c8, #8f94fb);
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 30px;
+    gap: 20px;
+}
+
+#card {
+    padding: 40px 30px;
+    background:linear-gradient(45deg,rgb(0, 0, 0),rgb(48, 0, 152),rgb(152, 0, 175));
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 1 1 calc(33% - 20px);
+    min-width: 280px;
+    max-width: 350px;
+    margin: 10px -3px;
+}
+
+#details {
+    margin-bottom: 20px;
+}
+
+#details h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffbb00;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.singleData {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    padding: 10px 15px;
+    background: #001875e0;
+    border-radius: 8px;
+    color: #d60000;
+    font-size: 16px;
+    gap: 50%;
+    align-items: ends;
+    overflow: hidden;
+}
+
+.singleData strong:first-child {
+    font-weight: bold;
+    color: #ff0000;
+}
+
+.singleData strong {
+    color: #ffffff;
+}
+
+#button {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    min-width: 100px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+button:active {
+    transform: scale(0.55);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s;
+}
+
+#delete {
+    background: #ff5252;
+    color: #fff;
+}
+
+#delete:hover {
+    background: #e53935;
+}
+
+#edit {
+    background: #42a5f5;
+    color: #fff;
+}
+
+#edit:hover {
+    background: #1e88e5;
+}
+
+@media (max-width: 768px) {
+    #display {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #card {
+        flex: 1 1 100%;
+        max-width: 90%;
+    }
+
+    #details h3 {
+        font-size: 20px;
+    }
+
+    .singleData {
+        font-size: 14px;
+    }
+
+    button {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+}
