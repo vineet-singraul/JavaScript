@@ -74,9 +74,10 @@ const SetAllDataInCard = () => {
             number: userNumber,
             problem: userProblem,
             location: userLocation,
+            Price:userPrice
         })
     });
 
-    location.href = "Data.html";
+    location.href ="Data.html";
     return false;
 };
