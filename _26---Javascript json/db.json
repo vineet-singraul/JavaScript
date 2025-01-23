@@ -1,0 +1,49 @@
+{
+    "Docter": [
+        {
+            "name": "Ravi Sharma",
+            "age": 30,
+            "Number": 9876543210,
+            "Email": "ravi.sharma@example.com",
+            "Problem": "Fever",
+            "Location": "ashoka Garden Bhopal",
+            "Price": "300 RS..."
+        },
+        {
+            "name": "Pooja Verma",
+            "age": 28,
+            "Number": 9123456789,
+            "Email": "pooja.verma@example.com",
+            "Problem": "Headache",
+            "Location": "ashoka Garden Bhopal",
+            "Price": "300 RS..."
+        },
+        {
+            "name": "Amit Gupta",
+            "age": 35,
+            "Number": 8901234567,
+            "Email": "amit.gupta@example.com",
+            "Problem": "Cough",
+            "Location": "ashoka Garden Bhopal",
+            "Price": "300 RS..."
+        },
+        {
+            "name": "Nisha Jain",
+            "age": 25,
+            "Number": 9012345678,
+            "Email": "nisha.jain@example.com",
+            "Problem": "Stomach Ache",
+            "Location": "ashoka Garden Bhopal",
+            "Price": "300 RS..."
+        },
+        {
+            "name": "Rahul Singh",
+            "age": 32,
+            "Number": 7890123456,
+            "Email": "rahul.singh@example.com",
+            "Problem": "Back Pain",
+            "Location": "ashoka Garden Bhopal",
+            "Price": "300 RS..."
+        }
+    ]
+}
