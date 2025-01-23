@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="inp">
+    <button onclick="Display()">ADD</button>
+    <script>
+        const Display = () => {
+            let userInput = document.querySelector("#inp").value;
+            const h1 = document.createElement("h1");
+            h1.innerHTML = userInput;
+            document.body.appendChild(h1);
+        }
+    </script>
+</body>
+
+</html>
