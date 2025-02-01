@@ -8,7 +8,6 @@ while (currentDate < futureDate) {
 console.log("Reached the target date!");
 
 
-
 // Current Date: Fri Jan 31 2025
 // Current Date: Sat Feb 01 2025
 // Current Date: Sun Feb 02 2025
