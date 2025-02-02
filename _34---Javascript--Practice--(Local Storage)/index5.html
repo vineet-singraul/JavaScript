@@ -1,0 +1,25 @@
+<html>
+<head>
+    <title>User Login</title>
+</head>
+<body>
+    <input type="text" id="username" placeholder="Username">
+    <button onclick="login()">Login</button>
+    <p id="welcomeMessage"></p>
+
+    <script>
+        function login() {
+            const username = document.getElementById('username').value;
+            localStorage.setItem('username', username);
+            document.getElementById('welcomeMessage').innerText = `Welcome, ${username}!`;
+        }
+
+        window.onload = function() {
+            const username = localStorage.getItem('username');
+            if (username) {
+                document.getElementById('welcomeMessage').innerText = `Welcome back, ${username}!`;
+            }
+        };
+    </script>
+</body>
+</html>
