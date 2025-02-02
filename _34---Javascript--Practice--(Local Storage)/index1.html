@@ -1,0 +1,21 @@
+<html>
+<body>
+    <input type="text" id="input" placeholder="Enter something">
+    <button onclick="saveData()">Save</button>
+    <button onclick="loadData()">Load</button>
+    <p id="output"></p>
+
+    <script>
+        function saveData() {
+            const input = document.getElementById('input').value;
+            localStorage.setItem('data', input);
+            alert('Data saved!');
+        }
+
+        function loadData() {
+            const data = localStorage.getItem('data');
+            document.getElementById('output').innerText = data || 'No data found';
+        }
+    </script>
+</body>
+</html>
