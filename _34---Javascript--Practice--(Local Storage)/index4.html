@@ -1,0 +1,31 @@
+<html>
+<body>
+    <h2>Products</h2>
+    <button onclick="addToCart('Product 1')">Add Product 1</button>
+    <button onclick="addToCart('Product 2')">Add Product 2</button>
+    <h3>Your Cart</h3>
+    <ul id="cartList"></ul>
+
+    <script>
+        window.onload = loadCart;
+
+        function addToCart(product) {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push(product);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            loadCart();
+        }
+
+        function loadCart() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const cartList = document.getElementById('cartList');
+            cartList.innerHTML = '';
+            cart.forEach(product => {
+                const li = document.createElement('li');
+                li.textContent = product;
+                cartList.appendChild(li);
+            });
+        }
+    </script>
+</body>
+</html>
