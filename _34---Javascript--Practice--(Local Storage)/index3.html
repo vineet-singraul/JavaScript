@@ -1,0 +1,27 @@
+<html>
+<body>
+    <form onsubmit="saveFormData(); return false;">
+        <input type="text" id="name" placeholder="Name" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <button type="submit">Submit</button>
+    </form>
+
+    <p id="formOutput"></p>
+
+    <script>
+        function saveFormData() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            localStorage.setItem('name', name);
+            localStorage.setItem('email', email);
+            loadFormData();
+        }
+
+        function loadFormData() {
+            const name = localStorage.getItem('name');
+            const email = localStorage.getItem('email');
+            document.getElementById('formOutput').innerText = `Name: ${name}, Email: ${email}`;
+        }
+    </script>
+</body>
+</html>
