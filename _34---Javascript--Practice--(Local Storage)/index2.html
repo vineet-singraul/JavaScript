@@ -1,0 +1,26 @@
+<html>
+<body>
+    <label for="color">Choose a color:</label>
+    <select id="color" onchange="saveColor()">
+        <option value="red">Red</option>
+        <option value="green">Green</option>
+        <option value="blue">Blue</option>
+    </select>
+
+    <script>
+        window.onload = function() {
+            const savedColor = localStorage.getItem('color');
+            if (savedColor) {
+                document.body.style.backgroundColor = savedColor;
+                document.getElementById('color').value = savedColor;
+            }
+        };
+
+        function saveColor() {
+            const selectedColor = document.getElementById('color').value;
+            localStorage.setItem('color', selectedColor);
+            document.body.style.backgroundColor = selectedColor;
+        }
+    </script>
+</body>
+</html>
