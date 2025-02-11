@@ -12,6 +12,7 @@ for (let i = 1; i <= 5; i++) {
             row += "X\t";
         }
     }
+
     console.log(row);
 }
       
