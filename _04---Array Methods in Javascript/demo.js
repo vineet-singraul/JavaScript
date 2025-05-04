@@ -4,3 +4,4 @@ let result = text.charAt(0);
 console.log(result); 
 
 // Output: h
+// Output: h
