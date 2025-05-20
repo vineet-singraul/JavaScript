@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <center>
+        Enter Your Name : <input type="text" id="inpName"><br><br>
+        Enter Your Age : <input type="text" id="inpage"><br><br>
+        <button id="btn" onclick="DataWork()">Click</button>
+        <h1 id="Show"></h1>
+    </center>
+
+</body>
+<script>
+    const DataWork = () => {
+        let userName = document.getElementById('inpName').innerHTML
+        let userAge = document.getElementById('inpage')
+        let dataShow =document.getElementById('Show')
+        alert(userAge,userName)
+        if (userAge > 18) {
+            dataShow.innerHTML = `Allowed ✅ Hello ${userName} thise content for you and your age is ${userAge.innerHTML}`
+        } 
+        else {
+            dataShow.innerHTML = `	Not Allowed ❌ Hello ${userName} thise content Not for you and your age is ${userAge.innerHTML}`
+        }
+    }
+
+</script>
+
+</html>

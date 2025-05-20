@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Age Checker</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+      background-color: #f0f0f0;
+    }
+    .container {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      width: 300px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    input, button {
+      padding: 10px;
+      margin-top: 10px;
+      width: 100%;
+    }
+    #result {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Age Checker</h2>
+    <input type="number" id="ageInput" placeholder="Enter your age">
+    <button onclick="checkAge()">Check</button>
+    <div id="result"></div>
+  </div>
+
+  <script>
+    function checkAge() {
+      let age = document.getElementById("ageInput").value;
+      let result = document.getElementById("result");
+
+      if (age >= 18) {
+        result.textContent = "✅ You are an adult.";
+      } else {
+        result.textContent = "❌ You are not an adult.";
+      }
+    }
+  </script>
+</body>
+</html>

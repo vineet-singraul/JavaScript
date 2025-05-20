@@ -1,0 +1,97 @@
+Samajh gaya! Neeche 10 **JavaScript ke questions** diye gaye hain jo **if-else condition** ke sath **HTML content pe effect** daalte hain. Har question ke saath uska **real output preview** (yaani kya dikhai dega ya kya hoga) bhi diya gaya hai — bina code ke.
+
+---
+
+### ✅ 1. **Button click par text "Hello" ko "Hi" me badlo**
+
+* **Question**: Agar `<p>Hello</p>` hai, toh button click par use "Hi" karna hai. Agar already "Hi" hai toh "Hello" karna hai.
+* **Output**:
+
+  * Pehle: `Hello`
+  * Button click: `Hi`
+  * Dobara click: `Hello`
+
+---
+
+### ✅ 2. **Age input do, agar 18 ya usse zyada ho toh "Allowed" dikhao, warna "Not Allowed"**
+
+* **Question**: User se age lo aur check karo kya wo 18+ hai?
+* **Output**:
+
+  * Input: `17` → Result: `Not Allowed`
+  * Input: `18` → Result: `Allowed`
+
+---
+
+### ✅ 3. **Password input lo, agar sahi ho toh "Correct Password" warna "Wrong Password"**
+
+* **Question**: User se password lo, agar "1234" ho toh sahi bolo.
+* **Output**:
+
+  * Input: `1234` → `Correct Password`
+  * Input: `0000` → `Wrong Password`
+
+---
+
+### ✅ 4. **Light on/off text toggle karo**
+
+* **Question**: Ek button click se text "Light is ON" ya "Light is OFF" me toggle ho.
+* **Output**:
+
+  * Pehle: `Light is OFF`
+  * Click: `Light is ON`
+  * Dobara click: `Light is OFF`
+
+
+### ✅ 6. **Temperature input lo, agar zyada ho toh "Hot", kam ho toh "Cold" dikhao**
+
+* **Question**: Temperature ka text output change karo
+* **Output**:
+
+  * Input: `35` → `Hot`
+  * Input: `15` → `Cold`
+
+---
+
+### ✅ 7. **Even ya Odd number check karna hai**
+
+* **Question**: User se number lo aur check karo even hai ya odd.
+* **Output**:
+
+  * Input: `6` → `Even Number`
+  * Input: `3` → `Odd Number`
+
+---
+
+### ✅ 8. **User gender select kare: Male ya Female**
+
+* **Question**: Gender ke base par greeting badlo.
+* **Output**:
+
+  * Input: `Male` → `Welcome Sir`
+  * Input: `Female` → `Welcome Ma'am`
+
+---
+
+### ✅ 9. **Marks input lo aur grade dikhao**
+
+* **Question**: Agar marks 90+ ho toh A, 80+ ho toh B, warna Fail dikhao.
+* **Output**:
+
+  * Input: `92` → `Grade A`
+  * Input: `85` → `Grade B`
+  * Input: `50` → `Fail`
+
+---
+
+### ✅ 10. **User day input kare, agar Sunday ho toh "Holiday", warna "Working Day" dikhao**
+
+* **Question**: Din ke base pe message badalna hai.
+* **Output**:
+
+  * Input: `Sunday` → `Holiday`
+  * Input: `Monday` → `Working Day`
+
+---
+
+Agar chaho toh main inme se kisi ka live preview bana kar bhi dikha sakta hoon. Batao kaunsa chahiye?

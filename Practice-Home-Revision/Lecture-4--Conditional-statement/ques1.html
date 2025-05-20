@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="head1">Hello</h1>
+    <button onclick="ChangeData()" id="btn">Change Content</button>
+</body>
+
+<script>
+    const ChangeData = () => {
+        let hadata = document.getElementById('head1');
+        let btnn = document.getElementById('btn')
+        if (hadata.innerHTML == "Hello") {
+            hadata.innerHTML = "Vineet";
+            btnn.innerHTML = "Vineet a gaya"
+        }
+        else if(hadata.innerHTML == "Vineet")
+        {
+            hadata.innerHTML = "Hello";
+            btnn.innerHTML = "Change Content"
+        }
+        else{
+            alert("Bhag yaha se")
+        }
+    }
+</script>
+
+</html>

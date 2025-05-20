@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        Enter first Password : <input type="text" id="pass1"><br><br>
+        Enter Confirm Password : <input type="text" id="pass2"><br><br>
+        <button onclick="Perform()">Submit</button>
+    </center>
+</body>
+<script>
+    const Perform = () => {
+        let password1 = document.getElementById('pass1').value
+        let password2 = document.getElementById('pass2').value
+        
+        if(password1==password2)
+        {
+            alert("Password Is Matched")
+        }
+        else{
+            alert("Password Is Not Match")
+        }
+    }
+</script>
+
+</html>
