@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: #000;
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+     <center>
+        Enter Any Number : <input type="text" id="inpNum"><br><br>
+        <h1>Table Number  Is :</h1>  <h1 id="tableNum"></h1>
+        <button  onclick="CreateTable()">Genrate Table</button>
+        <br><h2 id="num"></h2><br>
+     </center>
+</body>
+<script>
+  const CreateTable = () => {
+    let userNum = document.getElementById('inpNum').value
+    let printTable = document.getElementById('tableNum')
+    let pNum = document.getElementById('num')
+    printTable.innerHTML = userNum
+    pNum.innerHTML = ''
+    for(let i=1 ; i<11 ; i++)
+    {
+        pNum.innerHTML += `${userNum*i}<br>`;
+    }
+  }
+</script>
+</html>

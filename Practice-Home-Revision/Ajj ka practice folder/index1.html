@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: #000;
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+     <center>
+         <h1>Arrary</h1>
+         <h2 id="arr">[1,2,3,4,5]</h2>
+         <input type="text" id="userInp">
+         <button onclick="AdddElement()">Add</button>
+     </center>
+</body>
+<script>
+  const AdddElement = () => {
+    let inp = document.getElementById('userInp').value.trim();
+    if (inp === "") return; // ignore empty input
+    
+    // Get the current array string from the h2 element
+    let arrElem = document.getElementById('arr');
+    let arrStr = arrElem.innerHTML;
+
+    // Parse the string into an array
+    let arr = JSON.parse(arrStr);
+
+    // Convert input to number if possible
+    let num = Number(inp);
+    if (!isNaN(num)) {
+      arr.push(num);
+    } else {
+      arr.push(inp); // add as string if not a number
+    }
+
+    // Update the innerHTML with the new array string
+    arrElem.innerHTML = JSON.stringify(arr);
+    
+    // Clear the input box
+    document.getElementById('userInp').value = '';
+  }
+</script>
+
+</html>
