@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+</head>
+
+<body>
+    <input type="text" placeholder="Add Your To do" id="inpData">
+    <select name="profession" id="inpData1">
+        <option value="Student">Student</option>
+        <option value="Teacher">Teacher</option>
+    </select>
+    <button onclick="AddData()">Add Data</button>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>profession</th>
+            <th>Delete</th>
+            <th>Completed</th>
+            <th>Uncompleted</th>
+        </tr>
+        <tbody id="TableSection">
+        </tbody>
+    </table>
+</body>
+<script>
+    let count = 0;
+
+const AddData = () => {
+    let inpDataF = document.getElementById('inpData')
+    let inpDataF1 = document.getElementById('inpData1')
+    let TableSectionF = document.getElementById('TableSection')
+
+    let savedData = localStorage.getItem('data')
+    console.log(savedData)
+
+    if (savedData == inpDataF.value) {
+        alert("This Data Already exists")
+    } else {
+        localStorage.setItem('data', inpDataF.value)
+        count++;
+        TableSectionF.innerHTML += `<tr id="dataRow${count}"> 
+                                       <td id="D1${count}">${inpDataF.value}</td>
+                                       <td id="D2${count}">${inpDataF1.value}</td>
+                                       <td><button onclick="deleteData(${count})">Delete</button></td>
+                                       <td><button onclick="CompletedData(${count})">Completed</button></td>
+                                       <td><button onclick="UnCompletedData(${count})">Uncompleted</button></td>
+                                    </tr>`
+        inpDataF.value = ''
+        inpDataF1.value = ''
+    }
+}
+
+
+    const deleteData = (btn) => {
+        let row = document.getElementById('dataRow' + btn)
+        row.remove()
+    }
+
+    const CompletedData = (btn) => {
+        let data1 = document.getElementById('D1' + btn)
+        let data2 = document.getElementById('D2' + btn)
+        console.log(data1);
+        console.log(data2);
+        if (btn) {
+            data1.style.textDecoration = 'line-through';
+            data1.style.color = 'red'
+            data2.style.textDecoration = 'line-through';
+            data2.style.color = 'red'
+        }
+    }
+
+    const UnCompletedData = (btn) => {
+        let data1 = document.getElementById('D1' + btn)
+        let data2 = document.getElementById('D2' + btn)
+        if (btn) {
+            data1.style.textDecoration = 'none';
+            data1.style.color = 'green'
+            data2.style.textDecoration = 'none';
+            data2.style.color = 'green'
+        }
+    }
+</script>
+
+
+</html>
