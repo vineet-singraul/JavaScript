@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Event Delegation Example</title>
+</head>
+<body>
+  <ul id="p1">
+    <li>Home</li>
+    <li>About</li>
+    <li>Contact</li>
+    <li>Book Ride</li>
+    <li>Book Hotel</li>
+    <li>Book Event</li>
+  </ul>
+
+  <script>
+    const Datas = (event) => {
+      // Check if the clicked element is an <li>
+      if (event.target.tagName === 'LI') {
+        event.target.style.color = 'red'; // Only clicked <li> will turn red
+      }
+    };
+
+    // Attach event listener to the parent <ul>
+    document.getElementById('p1').addEventListener('click', Datas);
+  </script>
+</body>
+</html>
