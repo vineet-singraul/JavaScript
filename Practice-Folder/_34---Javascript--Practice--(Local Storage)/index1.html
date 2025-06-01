@@ -6,13 +6,15 @@
     <p id="output"></p>
 
     <script>
-        function saveData() {
+        function saveData() 
+        {
             const input = document.getElementById('input').value;
             localStorage.setItem('data', input);
             alert('Data saved!');
         }
 
-        function loadData() {
+        function loadData() 
+        {
             const data = localStorage.getItem('data');
             document.getElementById('output').innerText = data || 'No data found';
         }
