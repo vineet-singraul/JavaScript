@@ -13,7 +13,6 @@
             localStorage.setItem('username', username);
             document.getElementById('welcomeMessage').innerText = `Welcome, ${username}!`;
         }
-
         window.onload = function() {
             const username = localStorage.getItem('username');
             if (username) {
