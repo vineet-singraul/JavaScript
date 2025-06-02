@@ -4,6 +4,7 @@ for (let i = 0; i < 7; i++) {
     let futureDate = new Date();
     futureDate.setDate(today.getDate() + i);
     console.log(`Day ${i + 1}: ${futureDate.toDateString()}`);
+    console.log(`${i+1}`);
 }
 
 
