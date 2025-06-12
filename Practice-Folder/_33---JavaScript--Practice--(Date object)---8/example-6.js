@@ -3,7 +3,7 @@ function getFirstMonday(year, month) {
     while (date.getDay() !== 1) { 
         date.setDate(date.getDate() + 1);
     }    
-    return date;
+    return date;  
 }
 for (let month = 0; month < 12; month++) {
     let firstMonday = getFirstMonday(2024, month);
