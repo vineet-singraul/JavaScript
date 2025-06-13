@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find Average</title>
+</head>
+<body>
+  <input type="text" id="A1" placeholder="Enter Mark 1"> <br><br>
+  <input type="text" id="A2" placeholder="Enter Mark 2"> <br><br>
+  <input type="text" id="A3" placeholder="Enter Mark 3"> <br><br>
+  <button onclick="FindAverage()">Click Me!</button>
+
+  <script>
+    const FindAverage = () => {
+      let a = parseInt(document.getElementById('A1').value);
+      let b = parseInt(document.getElementById('A2').value);
+      let c = parseInt(document.getElementById('A3').value);
+
+      console.log("Inputs:", a, b, c);
+
+      let sum = a + b + c;
+      let avg = sum / 3;
+
+      console.log("Average:", avg);
+      alert("The Average Marks Are: " + avg);
+    }
+  </script>
+</body>
+</html>

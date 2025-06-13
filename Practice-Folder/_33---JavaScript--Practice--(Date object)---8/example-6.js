@@ -1,5 +1,5 @@
 function getFirstMonday(year, month) {
-    let date = new Date(year, month, 1);
+    let date = new Date(year, month, 1); 
     while (date.getDay() !== 1) { 
         date.setDate(date.getDate() + 1);
     }
