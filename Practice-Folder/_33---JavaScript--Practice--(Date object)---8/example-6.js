@@ -4,6 +4,7 @@ function getFirstMonday(year, month) {
         date.setDate(date.getDate() + 1);
     }    
     return date;  
+    
 }
 for (let month = 0; month < 12; month++) {
     let firstMonday = getFirstMonday(2024, month);
