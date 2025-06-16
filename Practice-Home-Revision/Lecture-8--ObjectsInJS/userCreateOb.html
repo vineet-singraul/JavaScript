@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Input to Object</title>
+</head>
+<body>
+
+    <h2>User Details</h2>
+    <label>Name: <input type="text" id="name"></label><br><br>
+    <label>Age: <input type="number" id="age"></label><br><br>
+    <label>City: <input type="text" id="city"></label><br><br>
+
+    <button onclick="createUserObject()">Create Object</button>
+
+    <pre id="output"></pre>
+
+    <script>
+        function createUserObject() {
+            const name = document.getElementById("name").value;
+            const age = document.getElementById("age").value;
+            const city = document.getElementById("city").value;
+
+            const user = {
+                name: name,
+                age: parseInt(age),
+                city: city
+            };
+
+            // Output the object
+            document.getElementById("output").textContent = JSON.stringify(user, null, 2);
+            console.log(user); // for console view
+        }
+    </script>
+
+</body>
+</html>
