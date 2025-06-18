@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <title>User Info Form</title>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2 id="h2Error"></h2>
+    <h2>User Information</h2>
+    <form onsubmit="handleSubmit(event)">
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" placeholder="Enter your name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="Enter your email" >
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter password" required>
+      </div>
+
+      <div class="form-group">
+        <label for="confirm">Confirm Password</label>
+        <input type="password" id="confirmpass" placeholder="Confirm password" required>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" placeholder="Enter phone number" required>
+      </div>
+
+      <button type="submit" class="submit-btn" onclick="handleSubmit()">Submit</button>
+    </form>
+  </div>
+
+
+<script>
+  const handleSubmit = (event) => {
+    event.preventDefault(); // 🛑 Stop form reload
+
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let password = document.getElementById("password").value;
+    let confirmpass = document.getElementById("confirmpass").value;
+    let phone = document.getElementById("phone").value;
+    let h2Error = document.getElementById("h2Error");
+
+    // 🧠 1. Name Validation
+    if (!isNaN(name)) {
+      h2Error.innerHTML = "❌ Please enter a valid name (not just numbers)";
+      return;
+    }
+
+    // 🧠 2. Email Validation
+    if (!(email.includes('@') && email.includes('gmail.com'))) {
+      h2Error.innerHTML = "❌ Please enter a valid Gmail address";
+      return;
+    }
+
+    if (
+    !password.match(/[1-9]/) ||   // At least one digit
+    !password.match(/[a-z]/) ||   // At least one lowercase
+    !password.match(/[A-Z]/) ||   // At least one uppercase
+    !password.match(/[!@#$%^&*()_+=\-;,.<>?]/) || // One special char
+    password.length < 8           // At least 8 characters
+    ) {
+    h2Error.innerHTML = "❌ Make your password strong (uppercase, lowercase, digit, special char, 8+ length)";
+    return;
+    }
+
+
+    // 🧠 3. Password Match Check
+    if (password !== confirmpass) {
+      h2Error.innerHTML = "❌ Passwords do not match";
+      return;
+    }
+
+    // ✅ All Valid
+    h2Error.innerHTML = "✅ All inputs are valid!";
+  };
+</script>
+
+
+</body>
+</html>
