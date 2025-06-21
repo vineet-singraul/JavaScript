@@ -1,0 +1,115 @@
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+    }
+
+    .age-calculator {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(15px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 40px;
+      width: 100%;
+      max-width: 450px;
+      box-shadow: 0 0 60px rgba(0, 255, 255, 0.1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .age-calculator::before {
+      content: '';
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      background: conic-gradient(from 0deg, #00fff0, #ff00e0, #00fff0);
+      top: -50%;
+      left: -50%;
+      z-index: 0;
+      border-radius: 50%;
+      filter: blur(120px);
+      animation: rotate 10s linear infinite;
+    }
+
+    @keyframes rotate {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .age-calculator * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .age-calculator h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+      text-align: center;
+      color: #00fff0;
+      text-shadow: 0 0 10px #00fff0;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: #ccc;
+    }
+
+    .form-group input {
+      padding: 12px;
+      border-radius: 10px;
+      border: none;
+      font-size: 1rem;
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      outline: none;
+    }
+
+    .form-group input::placeholder {
+      color: #bbb;
+    }
+
+    .calculate-btn {
+      margin-top: 10px;
+      width: 100%;
+      padding: 12px;
+      background: linear-gradient(135deg, #00fff0, #ff00e0);
+      border: none;
+      border-radius: 10px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #000;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .calculate-btn:hover {
+      opacity: 0.85;
+    }
+
+    .result {
+      margin-top: 25px;
+      font-size: 1.2rem;
+      text-align: center;
+      color: #fff;
+      background: rgba(255,255,255,0.07);
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: inset 0 0 10px rgba(0,255,255,0.2);
+    }
