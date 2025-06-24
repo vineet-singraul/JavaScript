@@ -1,0 +1,34 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <button id="BTN">
+        <span>ClicK Me !</span>
+     </button>
+
+     <script>
+        let  btn = document.getElementById("BTN")
+
+        btn.addEventListener("click", (e)=>{
+            let tagetElement = e.target.tagName;
+            let CurrentButton = e.currentTarget.tagName;
+            alert(`Target button hai ${tagetElement} \n and Targetcurrent B hai ${CurrentButton}`)
+        })
+     </script>
+</body>
+</html> -->
+
+
+<button id="btn">Click Me</button>
+
+<script>
+  const btn = document.getElementById("btn");
+
+  btn.addEventListener("click", () => {
+    alert("Clicked only once!");
+  }, { once: true });
+</script>
