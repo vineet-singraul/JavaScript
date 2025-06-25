@@ -5,9 +5,6 @@ function getFirstMonday(year, month) {
     }    
     return date;  
 
-
-
-    
     
 }
 for (let month = 0; month < 12; month++) {
