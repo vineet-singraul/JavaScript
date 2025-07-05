@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <div id="par" style="display: flex; background: rgba(255, 0, 0, 0.278); padding: 20px;">
+    <div id="child" style="background-color: aqua; padding: 10px;">h1</div>
+</div>
+
+<script>
+    let par = document.getElementById("par");
+    let child = document.getElementById("child");
+
+    par.addEventListener("click", () => alert("Parent Element"));
+
+    child.addEventListener("click", (e) => {
+        alert("Child Element");
+        // e.stopPropagation();  // Uncomment this line to stop bubbling
+    });
+</script>
+
+</body>
+</html>
